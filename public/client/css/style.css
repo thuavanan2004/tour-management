@@ -1,0 +1,89 @@
+/* Header */
+.header-main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  height: 100px;
+}
+
+.section-logo a {
+  color: #FFF;
+  text-align: center;
+  font-family: Volkhov;
+  font-size: 31.622px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.section-menu {
+  display: flex;
+}
+
+.section-menu .menu-item a {
+  color: #FFF;
+  font-family: "Circular Std";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-left: 50px;
+}
+
+.section-user {
+  display: flex;
+}
+
+.section-user .button-login {
+  background: #DF6951;
+  margin-left: 10px;
+  color: #FFF;
+  font-family: "Circular Std";
+  font-size: 17px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  padding: 5px 10px;
+}
+
+/* End header */
+/* Section Intro  */
+.section-intro {
+  background-image: url("../images/img-intro-1.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  margin-top: -100px;
+  padding-top: 300px;
+  /* background: linear-gradient(0deg, rgba(0, 0, 0, 0.33) 0%, rgba(0, 0, 0, 0.33) 100%), url(<path-to-image>) lightgray 50% / cover no-repeat; */
+}
+
+.section-intro svg {
+  width: 78.356px;
+  height: 15.671px;
+  flex-shrink: 0;
+}
+
+.section-intro .inner-title {
+  width: 50%;
+  color: #FFF;
+  font-size: 58.506px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 67.908px;
+  /* 116.071% */
+}
+
+.section-intro .form-filter-bar {
+  display: flex;
+  border-radius: 5.224px;
+  background: rgba(243, 243, 243, 0.60);
+  backdrop-filter: blur(17.760618209838867px);
+  padding: 10px;
+}
+
+/* End Section Intro  */
