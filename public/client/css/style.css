@@ -80,10 +80,60 @@
 
 .section-intro .form-filter-bar {
   display: flex;
+  align-items: center;
   border-radius: 5.224px;
   background: rgba(243, 243, 243, 0.60);
   backdrop-filter: blur(17.760618209838867px);
   padding: 10px;
+  width: fit-content;
+  margin-top: 20px;
+}
+
+.section-intro .form-filter-bar .nav-item {
+  margin-right: 10px;
+  border-right: solid 1.5px #a4a0a0;
+}
+
+.section-intro .form-filter-bar .nav-item:last-child {
+  border-right: none;
+}
+
+.section-intro .form-filter-bar .nav-item button {
+  background: none;
+  border: none;
+}
+
+.section-intro .form-filter-bar .nav-item button:focus {
+  outline: none !important;
+  border: none;
+}
+
+.section-intro .form-filter-bar .nav-item input {
+  background: none;
+  border: none;
+  margin-left: 5px;
+}
+
+.section-intro .form-filter-bar .nav-item input:focus {
+  outline: none;
+}
+
+.section-intro .form-filter-bar select input:focus {
+  box-shadow: 0 0 0 .25rem #e9a89a;
+  margin: auto;
+  margin-bottom: 3px;
+}
+
+.section-intro .form-filter-bar .dropdown-item.active {
+  background-color: #DF6951;
+}
+
+.section-intro .button-submit {
+  background-color: #DF6951;
+  color: #fff;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 5px 15px;
 }
 
 /* End Section Intro  */
