@@ -1,5 +1,119 @@
-h1 Trang Danh sách tour
+extends ../../layouts/default 
+block main 
+  .section-intro-tours 
+    .box-content
+      h3.inner-sub-title Search Tour 
+      h2.inner-title Travel With Us  
+  .section-tours 
+    .container 
+      .box-main
+        .filter-sort 
+          .sort-item 
+            i(class="fa-regular fa-calendar")
+            span() Date 
+          .sort-item 
+            i(class="fa-solid fa-arrow-up-wide-short")
+            span Price Low to High 
+          .sort-item 
+            i(class="fa-solid fa-arrow-down-wide-short")
+            span Price High to Low 
+          .sort-item 
+            i(class="fa-regular fa-pen-to-square")
+            span Name(A- Z)
+        .tour-main 
+          .row  
+            .col-md-8.col-12
+              .list-tour
+                .row 
+                  .col-4 
+                    .tour-item 
+                      .box-head 
+                        .inner-img 
+                          img(src="/client/images/tour-1.png")
+                        .inner-information 
+                          .inner-date 
+                            i(class="fa-regular fa-calendar")
+                            span 12, September 2022
+                          .inner-quantity-people 
+                            i(class="fa-solid fa-users")
+                            span 120+ People
+                      .box-content 
+                        h4.inner-title Switzerland
+                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
+                      .box-footer 
+                        span.inner-price $ 1.100
+                        .inner-rating 
+                          i(class="fa-solid fa-star")
+                          span 5.0
+                  .col-4 
+                    .tour-item 
+                      .box-head 
+                        .inner-img 
+                          img(src="/client/images/tour-2.png")
+                        .inner-information 
+                          .inner-date 
+                            i(class="fa-regular fa-calendar")
+                            span 12, September 2022
+                          .inner-quantity-people 
+                            i(class="fa-solid fa-users")
+                            span 120+ People
+                      .box-content 
+                        h4.inner-title Switzerland
+                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
+                      .box-footer 
+                        span.inner-price $ 1.100
+                        .inner-rating 
+                          i(class="fa-solid fa-star")
+                          span 5.0
+                  .col-4 
+                    .tour-item 
+                      .box-head 
+                        .inner-img 
+                          img(src="/client/images/tour-3.png")
+                        .inner-information 
+                          .inner-item 
+                            i(class="fa-regular fa-calendar")
+                            span 12, September 2022
+                          .inner-item
+                            i(class="fa-solid fa-users")
+                            span 120+ People
+                      .box-content 
+                        h4.inner-title Switzerland
+                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
+                      .box-footer 
+                        span.inner-price $ 1.100
+                        .inner-rating 
+                          i(class="fa-solid fa-star")
+                          span 5.0
+            .col-md-4.col-12
+              .form-search-tour
+                h4.form-title Plan Your Trip 
+                p.form-desc Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolo.
+                form(class="")
+                  div(class="form-control")
+                    i(class="fa-solid fa-magnifying-glass")
+                    input(type="text" name="title" placeholder="Search Tour")
+                  div(class="form-control")
+                    i(class="fa-solid fa-location-dot")
+                    select(class="selectpicker" data-live-search="true")
+                      option(data-tokens='1') Thanh Hoá
+                      option(data-tokens='2') Hà Nội
+                      option(data-tokens='2') Ninh Binh
+                  div(class="form-control")
+                    i(class="fa-solid fa-calendar-days")
+                    input(type="text" id="datepicker" placeholder="Ngày đi")
+                  div(class="form-filter-slider")
+                    p.filter-price Filter By Price 
+                    div(id="price-slider")
+                    div(class="price-value")
+                      span(class="price-title") Price: 
+                      span(id="min-price-value") 0
+                      span(id="max-price-value") 1000
+                  button(type="submit" class="button button-book") Book Now
 
-ul
-  each item in tours
-    li #{item.title}
+              .tour-img 
+                img(src="/client/images/tour-4.jpg")
+
+
+
+
