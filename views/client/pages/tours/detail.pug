@@ -1,0 +1,145 @@
+extends ../../layouts/default 
+block main 
+  .section-tour-detail 
+    .intro-tour
+      div(class="inner-img") 
+        img(src="/client/images/intro-tour-detail.jpg")
+      .box-content
+        h4.inner-sub-title Explore
+        h3.inner-title Landscaper 
+    .section-tours
+      .container-fixed 
+        .box-main
+          div(class="box-navigation" id="nav-tab" role="tablist")
+            div(class="nav-item active" id="information" data-bs-toggle="tab" data-bs-target="#nav-information")
+              i(class="fa-solid fa-circle-info fa-fw")
+              span Information
+            div(class="nav-item" id="plan" data-bs-toggle="tab" data-bs-target="#nav-plan")
+              i(class="fa-solid fa-calendar")
+              span Tour Plan
+            div(class="nav-item" id="location" data-bs-toggle="tab" data-bs-target="#nav-location")
+              i(class="fa-solid fa-location-dot")
+              span Location
+            div(class="nav-item" id="gallery" data-bs-toggle="tab" data-bs-target="#nav-gallery")
+              i(class="fa-solid fa-images")
+              span Gallery
+          div(class="tour-main")
+            .row  
+              .col-7.tab-content(id="nav-tabContent")
+                //- Nội dung tab Information 
+                div(class="box-left tab-pane show active tab-information" id="nav-information" role="tabpanel" aria-labelledby="information")
+                  .box-head 
+                    h3.inner-title Switzerland
+                    .inner-price 
+                      span.price-new 2000$ /
+                      span.price-old  2200$
+                  div(class="inner-rate" list-rating)
+                    i(class="fa-solid fa-star evaluated" data-rate=1)
+                    i(class="fa-solid fa-star evaluated" data-rate=2)
+                    i(class="fa-solid fa-star evaluated" data-rate=3)
+                    i(class="fa-solid fa-star evaluated" data-rate=4)
+                    i(class="fa-solid fa-star evaluated" data-rate=5)
+
+                  p.inner-desc Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti. Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolor similique ut quasi maxime ut deserunt autem At praesentium voluptatem aut libero nisi. Et eligendi sint ab cumque veritatis aut provident aliquam. Aut aspernatur consequuntur eum quaerat distinctio ut inventore aliquid et quasi alias ut rerum suscipit et nihil deleniti.
+                  .inner-item 
+                    span.title Code : 
+                    span.content TOUR0001
+                  .inner-item 
+                    span.title Max Participants : 
+                    span.content 10
+                  .inner-item 
+                    span.title Address : 
+                    span.content Thanh Hóa
+
+
+
+
+                //- Nội dung tab tour plan 
+                div(class="box-left tab-pane fade" id="nav-plan" role="tabpanel" aria-labelledby="plan")
+                  .inner-title Tour Plan 
+                  .tour-plan 
+                    .plan-item
+                      .inner-title Day 1: Departure
+                      p.inner-desc Qui tempore voluptate qui quia commodi rem praesentium alias et voluptates officia sed molestiae sint et voluptas quos. Qui harum repudiandae galisum dolorem 
+                      ul 
+                        li 5 Star Accommodation
+                        li Breakfast
+                        li 5 Star Accommodation
+                        li Breakfast
+                    .plan-item
+                      .inner-title Day 2: Visiting Zurich, Geneva and Zermatt
+                      p.inner-desc Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.
+                      ul 
+                        li 5 Star Accommodation
+                        li Breakfast
+                        li 5 Star Accommodation
+                        li Breakfast
+                    .plan-item
+                      .inner-title Day 3: Reset
+                      p.inner-desc Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.
+                      ul 
+                        li 5 Star Accommodation
+                        li Breakfast
+                    .plan-item
+                      .inner-title Day 4: Historical Tour
+                      p.inner-desc Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.
+                      ul 
+                        li 5 Star Accommodation
+                        li Breakfast
+                        li 5 Star Accommodation
+                        li Breakfast
+                    .plan-item
+                      .inner-title Day 5: Return
+                      p.inner-desc Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet.
+
+                //- Nội dung tab location
+                div(class="box-left tab-pane fade tab-location" id="nav-location" role="tabpanel" aria-labelledby="location")
+                  .inner-title Location
+                  iframe(src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7447.034263607895!2d105.74316662535148!3d21.05199829243545!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1720977352826!5m2!1svi!2s" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade") 
+
+                //- Nội dung tab gallery
+                div(class="box-left tab-pane fade tab-gallery" id="nav-gallery" role="tabpanel" aria-labelledby="gallery")
+                  .tab-img 
+                    .list-img
+                      .inner-img
+                        img(src="/client/images/img-booking-1.jpg")
+                      .inner-img
+                        img(src="/client/images/img-romantic-1.jpg")
+                      .inner-img
+                        img(src="/client/images/img-romantic-2.jpg")
+                      .inner-img
+                        img(src="/client/images/img-romantic-3.jpg")
+                      .inner-img
+                        img(src="/client/images/img-romantic-4.jpg")
+                      .inner-img
+                        img(src="/client/images/img-trendy-1.png")
+                      .inner-img
+                        img(src="/client/images/img-trendy-2.jpg")
+              .col-md-5.col-12
+                .form-search-tour
+                  h4.form-title Book This Tour
+                  p.form-desc Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolo.
+                  form(class="")
+                    div(class="form-control")
+                      i(class="fa-solid fa-user")
+                      input(type="text" name="title" placeholder="Name")
+                    div(class="form-control")
+                      i(class="fa-solid fa-envelope")
+                      input(type="text" name="title" placeholder="Email")
+                    div(class="form-control")
+                      i(class="fa-solid fa-envelope")
+                      input(type="text" name="title" placeholder="Confirm email")
+                    div(class="form-control")
+                      i(class="fa-solid fa-phone")
+                      input(type="text" name="title" placeholder="Phone")
+                    div(class="form-control")
+                      i(class="fa-solid fa-location-crosshairs")
+                      input(type="text" name="title" placeholder="Address")
+                    div(class="form-control")
+                      i(class="fa-solid fa-message")
+                      input(type="text" name="title" placeholder="Message")
+
+                    button(type="submit" class="button button-book") Book Now
+                .tour-img 
+                  img(src="/client/images/tour-4.jpg")
+

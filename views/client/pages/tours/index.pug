@@ -7,84 +7,48 @@ block main
   .section-tours 
     .container 
       .box-main
-        .filter-sort 
-          .sort-item 
+        div(class="box-navigation" filter-sort)
+          .nav-item
             i(class="fa-regular fa-calendar")
-            span() Date 
-          .sort-item 
+            span(filter-by-date) Date 
+          .nav-item
             i(class="fa-solid fa-arrow-up-wide-short")
-            span Price Low to High 
-          .sort-item 
+            span(filter-by-price="price-desc") Price Low to High 
+          .nav-item
             i(class="fa-solid fa-arrow-down-wide-short")
-            span Price High to Low 
-          .sort-item 
+            span(filter-by-price="price-asc") Price High to Low 
+          .nav-item
             i(class="fa-regular fa-pen-to-square")
-            span Name(A- Z)
+            span(filter-by-title) Name(A- Z)
         .tour-main 
           .row  
             .col-md-8.col-12
               .list-tour
                 .row 
-                  .col-4 
-                    .tour-item 
-                      .box-head 
-                        .inner-img 
-                          img(src="/client/images/tour-1.png")
-                        .inner-information 
-                          .inner-date 
-                            i(class="fa-regular fa-calendar")
-                            span 12, September 2022
-                          .inner-quantity-people 
-                            i(class="fa-solid fa-users")
-                            span 120+ People
-                      .box-content 
-                        h4.inner-title Switzerland
-                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
-                      .box-footer 
-                        span.inner-price $ 1.100
-                        .inner-rating 
-                          i(class="fa-solid fa-star")
-                          span 5.0
-                  .col-4 
-                    .tour-item 
-                      .box-head 
-                        .inner-img 
-                          img(src="/client/images/tour-2.png")
-                        .inner-information 
-                          .inner-date 
-                            i(class="fa-regular fa-calendar")
-                            span 12, September 2022
-                          .inner-quantity-people 
-                            i(class="fa-solid fa-users")
-                            span 120+ People
-                      .box-content 
-                        h4.inner-title Switzerland
-                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
-                      .box-footer 
-                        span.inner-price $ 1.100
-                        .inner-rating 
-                          i(class="fa-solid fa-star")
-                          span 5.0
-                  .col-4 
-                    .tour-item 
-                      .box-head 
-                        .inner-img 
-                          img(src="/client/images/tour-3.png")
-                        .inner-information 
-                          .inner-item 
-                            i(class="fa-regular fa-calendar")
-                            span 12, September 2022
-                          .inner-item
-                            i(class="fa-solid fa-users")
-                            span 120+ People
-                      .box-content 
-                        h4.inner-title Switzerland
-                        p.inner-desc  Qui tempore voluptate qui quia commodi rem praesentium alias et.
-                      .box-footer 
-                        span.inner-price $ 1.100
-                        .inner-rating 
-                          i(class="fa-solid fa-star")
-                          span 5.0
+                  each tour in tours 
+                    .col-4 
+                      .tour-item 
+                        .box-head
+                          a(href=`/tours/detail/${tour.slug}`)
+                            .inner-img 
+                              img(src=tour.images[0] alt=tour.title)
+                          .inner-information 
+                            .inner-date 
+                              i(class="fa-regular fa-calendar")
+                              span #{tour.timeStart}
+                            .inner-quantity-people 
+                              i(class="fa-solid fa-users")
+                              span 120+ People
+                        .box-content 
+                          a(href=`/tours/detail/${tour.slug}`)
+                            h4.inner-title #{tour.title}
+                          p.inner-desc  #{tour.information}
+                        .box-footer 
+                          span.inner-price #{tour.price_special.toLocaleString()}đ
+                          .inner-rating 
+                            i(class="fa-solid fa-star")
+                            span 5.0
+
             .col-md-4.col-12
               .form-search-tour
                 h4.form-title Plan Your Trip 
@@ -109,7 +73,7 @@ block main
                       span(class="price-title") Price: 
                       span(id="min-price-value") 0
                       span(id="max-price-value") 1000
-                  button(type="submit" class="button button-book") Book Now
+                  button(type="submit" class="button button-book") Search
 
               .tour-img 
                 img(src="/client/images/tour-4.jpg")
