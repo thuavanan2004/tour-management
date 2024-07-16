@@ -125,3 +125,9 @@ export const detail = async (req: Request, res: Response) => {
     tour: tour,
   });
 };
+
+// [GET] /tour/search
+export const search = async (req: Request, res: Response) => {
+  console.log(req.query);
+  res.send("ok");
+};

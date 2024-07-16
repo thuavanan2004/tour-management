@@ -53,26 +53,30 @@ block main
               .form-search-tour
                 h4.form-title Plan Your Trip 
                 p.form-desc Ex optio sequi et quos praesentium in nostrum labore nam rerum iusto aut magni nesciunt? Quo quidem neque iste expedita est dolo.
-                form(class="")
+                form(
+                  action=""
+                  data-path="/tours/search"
+                  form-search-tour
+                )
                   div(class="form-control")
                     i(class="fa-solid fa-magnifying-glass")
                     input(type="text" name="title" placeholder="Search Tour")
                   div(class="form-control")
                     i(class="fa-solid fa-location-dot")
-                    select(class="selectpicker" data-live-search="true")
+                    select(class="selectpicker" data-live-search="true" name="address")
                       option(data-tokens='1') Thanh Hoá
                       option(data-tokens='2') Hà Nội
                       option(data-tokens='2') Ninh Binh
                   div(class="form-control")
                     i(class="fa-solid fa-calendar-days")
-                    input(type="text" id="datepicker" placeholder="Ngày đi")
+                    input(type="text" id="datepicker" placeholder="Ngày đi" name="startDate")
                   div(class="form-filter-slider")
                     p.filter-price Filter By Price 
                     div(id="price-slider")
                     div(class="price-value")
                       span(class="price-title") Price: 
                       span(id="min-price-value") 0
-                      span(id="max-price-value") 1000
+                      span(id="max-price-value") 100
                   button(type="submit" class="button button-book") Search
 
               .tour-img 
